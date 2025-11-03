@@ -1,4 +1,5 @@
 dmenu-height-5.4.diff
 dmenu-center-20250407-b1e217b.diff
-dmenu-fuzzymatch-5.3.diff                         config.def.h.rej  add config option to config.def.h
-dmenu-fuzzyhighlight-5.3.diff                     dwm.c.rej         add color options to `dmenu -h`
+dmenu-fuzzymatch-5.3.diff                         config.def.h.rej          add config option to config.def.h
+dmenu-fuzzyhighlight-5.3.diff                     dmenu.c.rej               add color options to `dmenu -h`
+dmenu-password-5.0.diff                           dmenu.1.rej dmenu.c.rej   add -P option to `dmenu -h` and properly apply password function
