@@ -1,2 +1,3 @@
 dmenu-height-5.4.diff
 dmenu-center-20250407-b1e217b.diff
+dmenu-fuzzymatch-5.3.diff                         config.def.h.rej; add config option to config.def.h
