@@ -5,6 +5,11 @@ VERSION = 5.4
 PREFIX = /usr/local
 MANPREFIX = $(PREFIX)/share/man
 
+# freebsd
+X11INC = /usr/local/include
+X11LIb = /usr/local/lib
+
+# linux (uncomment)
 X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
 
@@ -14,10 +19,9 @@ XINERAMAFLAGS = -DXINERAMA
 
 # freetype
 FREETYPELIBS = -lfontconfig -lXft
-FREETYPEINC = /usr/include/freetype2
-# OpenBSD (uncomment)
-#FREETYPEINC = $(X11INC)/freetype2
-#MANPREFIX = ${PREFIX}/man
+FREETYPEINC = /usr/local/include/freetype2
+# linux (uncomment)
+#FREETYPEINC = /usr/include/freetype2
 
 # includes and libs
 INCS = -I$(X11INC) -I$(FREETYPEINC)
@@ -25,7 +29,7 @@ LIBS = -L$(X11LIB) -lX11 $(XINERAMALIBS) $(FREETYPELIBS)
 
 # flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS)
-CFLAGS   = -std=c99 -pedantic -Wall -Os $(INCS) $(CPPFLAGS)
+CFLAGS   = -std=c99 -pedantic -Wall -Os -flto $(INCS) $(CPPFLAGS)
 LDFLAGS  = $(LIBS)
 
 # compiler and linker
