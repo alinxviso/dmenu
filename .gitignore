@@ -3,3 +3,5 @@
 config.h
 /dmenu
 /stest
+*.orig
+*.rej
