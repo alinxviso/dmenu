@@ -5,7 +5,7 @@ this rendition is patched with simple qol patches and a custom edit to allow cha
 
 ## Requirements
 
-In order to build dmenu you need the Xlib header files.
+In order to build dmenu you need the Xlib header files as well as Xft and Fontconfig.
 
 
 ## Installation
