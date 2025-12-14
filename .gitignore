@@ -1,6 +1,6 @@
 .*.swp
 *.o
-config.h
+#config.h
 /dmenu
 /stest
 *.orig
